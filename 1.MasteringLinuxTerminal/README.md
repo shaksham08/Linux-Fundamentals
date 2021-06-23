@@ -190,3 +190,8 @@ eg. `cal 12 2017` - this will give calendar gor 2017 december
 - this is a hell lot long Pipeline
 - Now for alias `alias getdates='date | tee /home/shaksham/fulldate.txt | cut --delimiter=" " --field=1 | tee /home/shaksham/fulldate.txt | xargs echo hello'`
 - Now we can use `getdates` command in out **terminal**.
+
+
+# Complete Reference Pdf
+
+[PDF](Section+2+Command+Cheat+Sheet.pdf)
