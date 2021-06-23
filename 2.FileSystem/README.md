@@ -5,7 +5,7 @@ Some other resources are :-
 
 - Entire Linux Follow Tree Stucture
 - on top we have **root** directory `/`
-- [file system](filesystem.png)
+- ![file system](filesystem.png)
 - Every FIle can be traced back to root directory
 - One of the important directory here is home directory which contains the user and then user contains everything for that user eg , documents , desktop etc.
 - [cheat sheet](File+System+Cheat+Sheet.pdf)
