@@ -180,3 +180,53 @@ This process involves using a bash script, which is a relatively advanced concep
 4.	I then ran the script using ./word_generator.sh 100 > ~/words.txt.   This will save 100 random words into a file called `words.txt` in my    home directory. 
 
 
+- `sort word.txt`
+- `sort word.txt | tac` - this will reverse the sorting
+- `sort -r word.txt` - this will also reverse the content in effecient way.
+- `sort -n numbers.txt` - for sorting numbers numerically
+- `sort -nr numbers.txt` - for sorting numbers numerically and reverse
+- to get unique result then `sort -u -n numbers.txt`
+- `ls -l /etc | head -n 20 | sort -k 5n` - this will sort according to the file size here 5 is the column of that file size, we can even reverse it and add more number of options.
+- `ls -lh /etc | head -n 20 | sort -k 6M` -this will sort by month
+
+
+## Searching File Content(grep command)
+
+- `grep` commands will search for the input for the lines which contains that particulat text we are searching for.
+- `grep e hello.txt` - search the words which contain letter e in hellp.txt
+- `grep -c e hello.txt` - will give number of lines
+- `grep -ic a hello.txt` - this will give the count and also case insensitive
+- `grep -v e hello.txt` - it will find all the lines which dont have the letter **e**
+
+## File archiving and compression
+
+- How to archive and compress  files in linux and able to create and restore backups.
+- here we use tarball
+- In linux file extension dosent mean anything.
+- Creating a tarball is like putting our files in a bag to make them easier to store/compress.
+- tarball dosent do any compression but we can compress tarball using any compression algorithm.
+- `tar -cvf outarchive.tar file[1-3].txt` = c is to know that we want to create a tarball, v is to tell to ask and let us know, f tells to accept files, ourarchive.tar is the tarname.
+- with this we can create out tarball.
+- we can take a look at tarball using `tar -tf ourarchive.tar`
+- Here t option means test label which tells whats inside 
+- f is for the file and is necessary.
+- Now we will see how we can get it outside our tarball.
+- `tar -xvf ourarchive.tar` - here x is to extract, v for verbose
+- this will extract everything in the current directory.
+- There are 2 main compression algorithm **gzip** and **bzip2**.
+- gzip is faster but will compress less, but bzip2 takes more time but will compress more.
+- `gzip ourarchive.tar` - will compress in gzip compress data
+- To `gunzip gunzip ourarchive.tar.gz`
+- To unzip bzip2 we use `buzip2` command
+- Now coming to how to create a zip file
+- `zip outthing.zip hello.txt hello2.txt`
+- to unzip `unzip` command
+- Now can we do these process in one step that is creating tarball and compress it.
+- `tar -cvzf ourarchive.tar.gz file[1-3].txt` - gzip
+- `tar -cvjf ourarchive.tar.bz2 file[1-3].txt` - bzip2
+- `tar -xvzf ourarchive.tar.gz` - uncompress
+- `tar -xvjf ourarchive.tar.bz2` - uncompress
+  
+  [File archiving cheat sheet](File+Archiving+Cheat+Sheet.pdf)
+
+  
